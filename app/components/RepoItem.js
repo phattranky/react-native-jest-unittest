@@ -9,6 +9,7 @@ import {
 const RepoItem = (props) => {
   const { description, id, name, stargazers_count } = props.repo;
   const itemStyle = props.isSelected && [styles.item, styles.selected] || styles.item;
+
   return (
     <TouchableHighlight
       onPress={() => {props.selectRepo ? props.selectRepo(id) : {}}}
